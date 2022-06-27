@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+  <title>TLD Lookup</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+<div th:insert="fragments/general.html :: navigation"> </div>
+
+<div>
+  <h1>Domain Lookup</h1>
+  <form action="#" th:action="@{/tld}" method="get">
+    <p>Tld: <input type="text" name="tld" /></p>
+    <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+  </form>
+  <div>
+    <span th:text="${status}" />
+    <ul>
+      <li th:each="result: ${results}">
+        <span th:text="${result.tld}" /> -> <span th:text="${result.country}" />
+      </li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>

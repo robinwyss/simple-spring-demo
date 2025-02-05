@@ -1,12 +1,17 @@
 <!DOCTYPE HTML>
 <html xmlns:th="https://www.thymeleaf.org">
+
 <head>
-    <title>Spring Sample App</title>
+    <title>Hello</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
+
 <body>
-<div th:insert="fragments/general.html :: navigation"> </div>
-<h1>Hello</h1>
+
+    <div th:insert="fragments/general.html :: navigation"> </div>
+
+    <h1 th:text="${message}"></h1>
 
 </body>
+
 </html>

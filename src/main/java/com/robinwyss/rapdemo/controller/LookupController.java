@@ -1,6 +1,5 @@
 package com.robinwyss.rapdemo.controller;
 
-import com.robinwyss.rapdemo.dao.TldDao;
 import com.robinwyss.rapdemo.service.LookupService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
